@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CharactersService } from 'src/app/services/characters.service';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { CharacterDataService } from 'src/app/services/character-data.service';
 
 @Component({
   selector: 'app-character-list',
@@ -7,10 +7,12 @@ import { CharactersService } from 'src/app/services/characters.service';
   styleUrls: ['./character-list.component.scss']
 })
 export class CharacterListComponent implements OnInit {
+  character = this.characters.list;
 
-  constructor(private charactersService: CharactersService) { }
+  constructor(private characters: CharacterDataService) { }
 
   ngOnInit(): void {
+    this.characters.load()
   }
 
 }

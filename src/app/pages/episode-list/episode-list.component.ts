@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { EpisodeDataService } from 'src/app/services/episode-data.service';
 
 @Component({
   selector: 'app-episode-list',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EpisodeListComponent implements OnInit {
 
-  constructor() { }
+  episode = this.episodes.list;
+
+  constructor(private episodes: EpisodeDataService) { }
 
   ngOnInit(): void {
+    this.episodes.load()
   }
 
 }

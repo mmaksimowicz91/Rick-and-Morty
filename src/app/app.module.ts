@@ -11,6 +11,11 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shared/footer/footer.component';
+import { LocationImgComponent } from './location-img/location-img.component';
+import { CharacterImgComponent } from './character-img/character-img.component';
+import { EpisodeImgComponent } from './episode-img/episode-img.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
     LocationListComponent,
     NavbarComponent,
     HeaderComponent,
+    FooterComponent,
+    LocationImgComponent,
+    CharacterImgComponent,
+    EpisodeImgComponent,
+    PaginationComponent,
 
   ],
   imports: [

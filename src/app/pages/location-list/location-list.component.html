@@ -1,1 +1,4 @@
-<p>location-list works!</p>
+<h1>Locations</h1>
+
+
+<app-location-img *ngFor="let item of (location | async)" [location]="item"></app-location-img>

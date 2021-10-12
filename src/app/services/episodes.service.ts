@@ -16,4 +16,12 @@ export class EpisodesService {
   getEpisode(id: number) {
     return this.http.get(`https://rickandmortyapi.com/api/episode/${id}`)
   }
+
+  getPage(page: number) {
+    return this.http.get<EpisodeListResponse>(`https://rickandmortyapi.com/api/episode/`, {
+      params: {
+        page
+      }
+    })
+  }
 }

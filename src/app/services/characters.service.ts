@@ -16,6 +16,14 @@ export class CharactersService {
   getCharacter(id: number) {
     return this.http.get(`https://rickandmortyapi.com/api/character/${id}`)
   }
+
+  getPage(page: number) {
+    return this.http.get<CharacterListResponse>(`https://rickandmortyapi.com/api/character/`, {
+      params: {
+        page
+      }
+    })
+  }
 }
 
 

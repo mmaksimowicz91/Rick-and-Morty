@@ -1,1 +1,3 @@
-<p>episode-list works!</p>
+<h1>Episodes</h1>
+
+<app-episode-img *ngFor="let e of (episode | async)" [episode]="e"></app-episode-img>

@@ -3,7 +3,7 @@ import { Location } from './location';
 export interface LocationListResponse {
     info: {
         count: number,
-        page: number,
+        pages: number,
         next: string | null,
         prev: string | null
     }
