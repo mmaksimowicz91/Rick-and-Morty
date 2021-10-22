@@ -12,6 +12,7 @@ export class CharacterDataService {
   list = new BehaviorSubject<Character[]>([]);
   pages = new BehaviorSubject<number>(0);
   currentPage = new BehaviorSubject<number>(0);
+  itemCount = new BehaviorSubject<number>(0);
 
   constructor(private charactersService: CharactersService) { }
 
@@ -43,6 +44,7 @@ export class CharacterDataService {
   private handleRes(response: CharacterListResponse) {
     this.list.next(response.results);
     this.pages.next(response.info.pages)
+    this.itemCount.next(response.info.count)
     console.log(response)
   }
 }

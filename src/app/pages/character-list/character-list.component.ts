@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { CharacterDataService } from 'src/app/services/character-data.service';
 
 @Component({
@@ -7,12 +8,19 @@ import { CharacterDataService } from 'src/app/services/character-data.service';
   styleUrls: ['./character-list.component.scss']
 })
 export class CharacterListComponent implements OnInit {
-  character = this.characters.list;
-
   constructor(private characters: CharacterDataService) { }
+  character$ = this.characters.list;
+  count = this.characters.itemCount;
+
+
 
   ngOnInit(): void {
     this.characters.load()
+  }
+
+  changePage(event: PageEvent) {
+    console.log(event)
+    this.characters.getPage(event.pageIndex + 1)
   }
 
 }

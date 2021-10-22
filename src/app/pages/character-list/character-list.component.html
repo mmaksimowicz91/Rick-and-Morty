@@ -1,3 +1,6 @@
-<h1>Characters</h1>>
+<h1>Characters</h1>
 
-<app-character-img *ngFor="let char of (character | async)" [character]="char"></app-character-img>
+<app-character-img *ngFor="let char of (character$ | async)" [character]="char"></app-character-img>
+
+
+<mat-paginator hidePageSize="true" [length]="count | async" pageSize="20" (page)="changePage($event)"></mat-paginator>

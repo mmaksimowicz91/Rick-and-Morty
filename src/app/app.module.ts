@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +16,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { LocationImgComponent } from './location-img/location-img.component';
 import { CharacterImgComponent } from './character-img/character-img.component';
 import { EpisodeImgComponent } from './episode-img/episode-img.component';
-import { PaginationComponent } from './pagination/pagination.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     LocationImgComponent,
     CharacterImgComponent,
     EpisodeImgComponent,
-    PaginationComponent,
+
+
 
   ],
   imports: [
@@ -37,7 +41,11 @@ import { PaginationComponent } from './pagination/pagination.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
