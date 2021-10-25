@@ -1,3 +1,6 @@
 <h1>Episodes</h1>
 
-<app-episode-img *ngFor="let e of (episode | async)" [episode]="e"></app-episode-img>
+<app-episode-img *ngFor="let e of (episode$ | async)" [episode]="e"></app-episode-img>
+
+
+<mat-paginator hidePageSize="true" [length]="count | async" pageSize="20" (page)="changePage($event)"></mat-paginator>

@@ -13,6 +13,7 @@ export class LocationDataService {
   list = new BehaviorSubject<Location[]>([]);
   pages = new BehaviorSubject<number>(0);
   currentPage = new BehaviorSubject<number>(0);
+  itemCount = new BehaviorSubject<number>(0);
 
   constructor(private locationService: LocationsService) { }
 
@@ -44,7 +45,8 @@ export class LocationDataService {
   private handleRes(response: LocationListResponse) {
 
     this.list.next(response.results);
-    this.pages.next(response.info.pages)
+    this.pages.next(response.info.pages);
+    this.itemCount.next(response.info.count);
     console.log(response)
   }
 }

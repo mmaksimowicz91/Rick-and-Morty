@@ -43,8 +43,8 @@ export class CharacterDataService {
 
   private handleRes(response: CharacterListResponse) {
     this.list.next(response.results);
-    this.pages.next(response.info.pages)
-    this.itemCount.next(response.info.count)
+    this.pages.next(response.info.pages);
+    this.itemCount.next(response.info.count);
     console.log(response)
   }
 }

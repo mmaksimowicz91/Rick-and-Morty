@@ -1,4 +1,7 @@
 <h1>Locations</h1>
 
 
-<app-location-img *ngFor="let item of (location | async)" [location]="item"></app-location-img>
+<app-location-img *ngFor="let item of (location$ | async)" [location]="item"></app-location-img>
+
+
+<mat-paginator hidePageSize="true" [length]="count | async" pageSize="20" (page)="changePage($event)"></mat-paginator>

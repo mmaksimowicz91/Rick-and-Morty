@@ -12,6 +12,7 @@ export class EpisodeDataService {
   list = new BehaviorSubject<Episode[]>([]);
   pages = new BehaviorSubject<number>(0);
   currentPage = new BehaviorSubject<number>(0)
+  itemCount = new BehaviorSubject<number>(0);
 
   constructor(private episodeService: EpisodesService) { }
 
@@ -43,6 +44,7 @@ export class EpisodeDataService {
   private handleRes(response: EpisodeListResponse) {
     this.list.next(response.results);
     this.pages.next(response.info.pages)
+    this.itemCount.next(response.info.count)
     console.log(response)
   }
 }
