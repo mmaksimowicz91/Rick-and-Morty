@@ -1,7 +1,12 @@
 <h1>Locations</h1>
 
+<ng-container *ngIf="(location$ | async) as data; else loading">
+    <app-location-table [dataSource]="data"></app-location-table>
+</ng-container>
 
-<app-location-img *ngFor="let item of (location$ | async)" [location]="item"></app-location-img>
+<ng-template #loading>
+    Loading
+</ng-template>
 
 
 <mat-paginator hidePageSize="true" [length]="count | async" pageSize="20" (page)="changePage($event)"></mat-paginator>
