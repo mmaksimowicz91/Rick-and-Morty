@@ -11,6 +11,8 @@ import { LocationDataService } from 'src/app/services/location-data.service';
 
 
 export class LocationListComponent implements OnInit {
+
+
   constructor(private locations: LocationDataService) { }
   location$ = this.locations.list;
   count = this.locations.itemCount;

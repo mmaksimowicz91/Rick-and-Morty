@@ -13,12 +13,12 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './shared/footer/footer.component';
-import { LocationImgComponent } from './location-img/location-img.component';
-import { CharacterImgComponent } from './character-img/character-img.component';
-import { EpisodeImgComponent } from './episode-img/episode-img.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import { LocationTableComponent } from './shared/location-table/location-table.component';
+import { EpisodeTableComponent } from './shared/episode-table/episode-table.component';
+import { CharacterTableComponent } from './shared/character-table/character-table.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +29,9 @@ import { MatSelectModule } from '@angular/material/select';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
-    LocationImgComponent,
-    CharacterImgComponent,
-    EpisodeImgComponent,
+    LocationTableComponent,
+    EpisodeTableComponent,
+    CharacterTableComponent,
 
 
 

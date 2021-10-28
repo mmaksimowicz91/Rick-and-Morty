@@ -1,6 +1,12 @@
 <h1>Characters</h1>
 
-<app-character-img *ngFor="let char of (character$ | async)" [character]="char"></app-character-img>
+<ng-container *ngIf="(character$ | async) as data; else loading">
+    <app-character-table [dataSource]="data"></app-character-table>
+</ng-container>
+
+<ng-template #loading>
+    Loading
+</ng-template>
 
 
 <mat-paginator hidePageSize="true" [length]="count | async" pageSize="20" (page)="changePage($event)"></mat-paginator>

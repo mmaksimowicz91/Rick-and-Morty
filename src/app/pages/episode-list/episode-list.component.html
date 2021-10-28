@@ -1,6 +1,11 @@
 <h1>Episodes</h1>
 
-<app-episode-img *ngFor="let e of (episode$ | async)" [episode]="e"></app-episode-img>
+<ng-container *ngIf="(episode$ | async) as data; else loading">
+    <app-episode-table [dataSource]="data"></app-episode-table>
+</ng-container>
 
+<ng-template #loading>
+    Loading
+</ng-template>
 
 <mat-paginator hidePageSize="true" [length]="count | async" pageSize="20" (page)="changePage($event)"></mat-paginator>
