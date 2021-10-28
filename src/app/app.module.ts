@@ -19,6 +19,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { LocationTableComponent } from './shared/location-table/location-table.component';
 import { EpisodeTableComponent } from './shared/episode-table/episode-table.component';
 import { CharacterTableComponent } from './shared/character-table/character-table.component';
+import { HomeComponent } from './pages/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { CharacterTableComponent } from './shared/character-table/character-tabl
     LocationTableComponent,
     EpisodeTableComponent,
     CharacterTableComponent,
+    HomeComponent,
+
 
 
 

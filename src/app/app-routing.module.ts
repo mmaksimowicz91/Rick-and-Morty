@@ -3,9 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CharacterListComponent } from './pages/character-list/character-list.component';
 import { EpisodeListComponent } from './pages/episode-list/episode-list.component';
 import { LocationListComponent } from './pages/location-list/location-list.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 const routes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
   {
     path: 'character',
     component: CharacterListComponent
@@ -17,6 +22,9 @@ const routes: Routes = [
   {
     path: 'episode',
     component: EpisodeListComponent
+  },
+  {
+    
   }
 ];
 
