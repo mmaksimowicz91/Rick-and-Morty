@@ -4,10 +4,11 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Character } from '../interfaces/character';
 import { CharactersService } from '../services/characters.service';
+
 
 @Injectable({
   providedIn: 'root'

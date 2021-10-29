@@ -14,7 +14,7 @@ export class LocationsService {
   }
 
   getLocation(id: number) {
-    return this.http.get(`https://rickandmortyapi.com/api/location/${id}`)
+    return this.http.get<Location>(`https://rickandmortyapi.com/api/location/${id}`)
   }
 
   getPage(page: number) {

@@ -10,5 +10,5 @@ import { Location } from '../../interfaces/location';
 export class LocationTableComponent {
   @Input() dataSource: Location[] = [];
 
-  displayedColumns: string[] = ['name', 'type', 'dimension'];
+  displayedColumns: string[] = ['id', 'name', 'dimension'];
 }

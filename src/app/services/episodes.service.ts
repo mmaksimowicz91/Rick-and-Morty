@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EpisodeListResponse } from '../interfaces/episode-list-response';
+import { Episode } from '../interfaces/episode';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class EpisodesService {
   }
 
   getEpisode(id: number) {
-    return this.http.get(`https://rickandmortyapi.com/api/episode/${id}`)
+    return this.http.get<Episode>(`https://rickandmortyapi.com/api/episode/${id}`)
   }
 
   getPage(page: number) {

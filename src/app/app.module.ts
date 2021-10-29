@@ -20,6 +20,9 @@ import { LocationTableComponent } from './shared/location-table/location-table.c
 import { EpisodeTableComponent } from './shared/episode-table/episode-table.component';
 import { CharacterTableComponent } from './shared/character-table/character-table.component';
 import { HomeComponent } from './pages/home/home.component';
+import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
+import { EpisodeDetailsComponent } from './pages/episode-details/episode-details.component';
+import { LocationDetailsComponent } from './pages/location-details/location-details.component';
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { HomeComponent } from './pages/home/home.component';
     EpisodeTableComponent,
     CharacterTableComponent,
     HomeComponent,
+    CharacterDetailsComponent,
+    EpisodeDetailsComponent,
+    LocationDetailsComponent,
 
 
 
