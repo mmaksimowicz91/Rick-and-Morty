@@ -1,1 +1,63 @@
-<pre>{{ character | json }}</pre>
+<table class="table table-bordered">
+
+    <tbody>
+        <tr>
+            <th scope="row">ID</th>
+            <td>{{character.id | json}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Name</th>
+            <td>{{character.name | json}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Status</th>
+            <td>{{character.status | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Species</th>
+            <td>{{character.species | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Type</th>
+            <td>{{character.type | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Gender</th>
+            <td>{{character.gender | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Origin</th>
+            <td>{{character.origin | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Location</th>
+            <td>{{character.location | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Image</th>
+            <td><img [src]="character.image" /></td>
+
+        </tr>
+        <tr>
+            <th scope="row">Episode</th>
+            <td><a href="url">{{character.episode | json}}</a></td>
+
+        </tr>
+        <tr>
+            <th scope="row">URL</th>
+            <td><a href="url">{{character.url | json}}</a></td>
+
+        </tr>
+        <tr>
+            <th scope="row">Created</th>
+            <td>{{character.created | json}}</td>
+
+        </tr>
+    </tbody>
+</table>

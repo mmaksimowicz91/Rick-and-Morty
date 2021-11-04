@@ -1,1 +1,39 @@
-<pre>{{ location | json }}</pre>>
+<table class="table table-bordered">
+
+    <tbody>
+        <tr>
+            <th scope="row">ID</th>
+            <td>{{location.id | json}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Name</th>
+            <td>{{location.name | json}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Type</th>
+            <td>{{location.type | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Dimension</th>
+            <td>{{location.dimension | json}}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Residents</th>
+            <td><a href="url">{{location.residents | json}}</a></td>
+
+        </tr>
+        <tr>
+            <th scope="row">URL</th>
+            <td><a href="url">{{location.url | json}}</a></td>
+
+        </tr>
+        <tr>
+            <th scope="row">Created</th>
+            <td>{{location.created | json}}</td>
+
+        </tr>
+
+    </tbody>
+</table>
