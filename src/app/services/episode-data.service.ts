@@ -41,6 +41,16 @@ export class EpisodeDataService {
     this.getPage(prevPageNumber)
   }
 
+  saveEpisode(newValue: Episode) {
+    const idx = this.list.value.findIndex(episode => episode.id === newValue.id)
+    const list = [
+      ...this.list.value.splice(0, idx),
+      newValue,
+      ...this.list.value.splice(idx + 1)
+    ]
+    this.list.next(list);
+  }
+
   private handleRes(response: EpisodeListResponse) {
     this.list.next(response.results);
     this.pages.next(response.info.pages)

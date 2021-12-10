@@ -1,0 +1,54 @@
+<form [formGroup]="form">
+    <table class="table table-bordered">
+
+        <tbody>
+            <tr>
+                <th scope="row">ID</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="id">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Name</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="name">
+                </td>
+
+
+            </tr>
+            <tr>
+                <th scope="row">Air Date</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="air_date">
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">Episode</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="episode">
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">Characters</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="characters">
+                </td>
+
+            </tr>
+
+            <tr>
+                <th scope="row">Created</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="created">
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <button (click)="onSave()" type="submit" class="btn btn-sm btn-warning">
+        <i class="fa fa-edit"></i><b>Save</b></button>
+</form>

@@ -1,0 +1,84 @@
+<form [formGroup]="form">
+    <table class="table table-bordered">
+
+        <tbody>
+            <tr>
+                <th scope="row">ID</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="id">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Name</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="name">
+                </td>
+
+
+            </tr>
+            <tr>
+                <th scope="row">Status</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="status">
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">Species</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="species">
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">Type</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="type">
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">Gender</th>
+                <td><label for="gender-select" class="form-label"></label>
+                    <select id="gender-select" formControlName="gender">
+                        <option [value]="GENDER.Female">Female</option>
+                        <option [value]="GENDER.Male">Male</option>
+                        <option [value]="GENDER.Genderless">Genderless</option>
+                        <option [value]="GENDER.Unknown">Unknown</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Origin</th>
+                <td>
+
+                    <select id="gender-select" formControlName="origin">
+                        <option *ngFor="let location of locations" [value]="location">{{ location.name }}</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">Location</th>
+                <td>
+                    <select id="gender-select" formControlName="location">
+                        <option *ngFor="let location of locations" [value]="location">{{ location.name }}</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th scope="row">Created</th>
+                <td>
+                    <input type="text" class="form-control" formControlName="created">
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <button (click)="onSave()" type="submit" class="btn btn-sm btn-warning">
+        <i class="fa fa-edit"></i><b>Save</b></button>
+</form>

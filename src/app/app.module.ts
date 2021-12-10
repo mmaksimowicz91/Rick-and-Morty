@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,16 +49,14 @@ import { EditEpisodeComponent } from './pages/edit-episode/edit-episode.componen
     EditLocationComponent,
     EditEpisodeComponent,
 
-
-
-
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NgxPaginationModule,
     MatPaginatorModule,

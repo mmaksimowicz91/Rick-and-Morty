@@ -8,15 +8,18 @@
         <tr>
             <th scope="row">Name</th>
             <td>{{episode.name | json}}</td>
+
         </tr>
         <tr>
             <th scope="row">Air Date</th>
             <td>{{episode.air_date | json}}</td>
 
+
         </tr>
         <tr>
             <th scope="row">Episode</th>
             <td>{{episode.episode | json}}</td>
+
 
         </tr>
         <tr>
@@ -32,3 +35,8 @@
 
     </tbody>
 </table>
+
+<a class="btn btn-sm btn-warning" [routerLink]="['/' ,'episode', episode.id, 'edit' ]">
+    <i class="fa fa-edit"></i>
+    <b>Edit</b>
+</a>

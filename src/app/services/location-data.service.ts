@@ -42,6 +42,16 @@ export class LocationDataService {
     this.getPage(prevPageNumber)
   }
 
+  saveLocation(newValue: Location) {
+    const idx = this.list.value.findIndex(location => location.id === newValue.id)
+    const list = [
+      ...this.list.value.splice(0, idx),
+      newValue,
+      ...this.list.value.splice(idx + 1)
+    ]
+    this.list.next(list);
+  }
+
   private handleRes(response: LocationListResponse) {
 
     this.list.next(response.results);

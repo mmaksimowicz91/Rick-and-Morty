@@ -8,10 +8,13 @@
         <tr>
             <th scope="row">Name</th>
             <td>{{location.name | json}}</td>
+
+
         </tr>
         <tr>
             <th scope="row">Type</th>
             <td>{{location.type | json}}</td>
+
 
         </tr>
         <tr>
@@ -22,6 +25,7 @@
         <tr>
             <th scope="row">Residents</th>
             <td><a href="url">{{location.residents | json}}</a></td>
+
 
         </tr>
         <tr>
@@ -37,3 +41,8 @@
 
     </tbody>
 </table>
+
+<a class="btn btn-sm btn-warning" [routerLink]="['/' ,'location', location.id, 'edit' ]">
+    <i class="fa fa-edit"></i>
+    <b>Edit</b>
+</a>

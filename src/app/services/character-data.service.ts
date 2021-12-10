@@ -41,11 +41,23 @@ export class CharacterDataService {
     this.getPage(prevPageNumber)
   }
 
+
+  saveCharacter(newValue: Character) {
+    const idx = this.list.value.findIndex(character => character.id === newValue.id);
+    const list = [
+      ...this.list.value.splice(0, idx),
+      newValue,
+      ...this.list.value.splice(idx + 1)
+    ];
+    this.list.next(list);
+
+  }
+
   private handleRes(response: CharacterListResponse) {
     this.list.next(response.results);
     this.pages.next(response.info.pages);
     this.itemCount.next(response.info.count);
-    console.log(response)
+
   }
 }
 

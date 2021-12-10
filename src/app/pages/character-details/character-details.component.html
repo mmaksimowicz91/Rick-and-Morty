@@ -8,35 +8,43 @@
         <tr>
             <th scope="row">Name</th>
             <td>{{character.name}}</td>
+
+
         </tr>
         <tr>
             <th scope="row">Status</th>
             <td>{{character.status}}</td>
+
 
         </tr>
         <tr>
             <th scope="row">Species</th>
             <td>{{character.species}}</td>
 
+
         </tr>
         <tr>
             <th scope="row">Type</th>
             <td>{{character.type}}</td>
+
 
         </tr>
         <tr>
             <th scope="row">Gender</th>
             <td>{{character.gender}}</td>
 
+
         </tr>
         <tr>
             <th scope="row">Origin</th>
             <td>{{character.origin | json}}</td>
 
+
         </tr>
         <tr>
             <th scope="row">Location</th>
             <td>{{character.location | json}}</td>
+
 
         </tr>
         <tr>
@@ -48,10 +56,12 @@
             <th scope="row">Episode</th>
             <td><a href="url">{{character.episode | json}}</a></td>
 
+
         </tr>
         <tr>
             <th scope="row">URL</th>
             <td><a href="url">{{character.url | json}}</a></td>
+
 
         </tr>
         <tr>
@@ -59,11 +69,11 @@
             <td>{{character.created | json}}</td>
 
         </tr>
-        <tr>
 
-            <button class="btn btn-sm btn-warning">
-                <i class="fa fa-edit"></i><b>Edit</b></button>
-
-        </tr>
     </tbody>
 </table>
+
+<a class="btn btn-sm btn-warning" [routerLink]="['/' ,'character', character.id, 'edit' ]">
+    <i class="fa fa-edit"></i>
+    <b>Edit</b>
+</a>
